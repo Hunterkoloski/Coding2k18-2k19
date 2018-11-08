@@ -332,3 +332,10 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# Unwanted Unity Files
+*/[Ll]ibrary/
+*/[Tt]emp/
+*/[Oo]bj/
+*/[Bb]uild/
+*/Assets/AssetStoreTools*
