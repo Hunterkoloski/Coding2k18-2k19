@@ -20,8 +20,8 @@ namespace Ascii_Art
                 Console.WriteLine("If you would like Right Triangle number 2, select 5.");
                 Console.WriteLine("If you would like a pyramid, select 6");
                 Console.WriteLine("If you would like special number 1, select 7");
-                Console.WriteLine("If you would like special number 2, select 8 NOT CURRENTLY ");
-                Console.WriteLine("If you would like special number 3, select 9 NOT CURRENTLY ");
+                Console.WriteLine("If you would like special number 2, select 8 ");
+                Console.WriteLine("If you would like special number 3, select 9");
                 Console.WriteLine("If you would like to leave the program. enter 10.");
                 opt = int.Parse(Console.ReadLine());
 

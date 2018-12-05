@@ -26,8 +26,9 @@ namespace Tic_Tac_Toe
             drawBoard(ticTacToe);
             do
             {
-
-                
+                processTurn(ticTacToe, 'x');
+                drawBoard(ticTacToe);
+                processTurn(ticTacToe, 'x');
 
 
 
@@ -38,11 +39,10 @@ namespace Tic_Tac_Toe
 
         static void processTurn(char[,] board, char player) 
             {
-            Console.WriteLine("Welcome to Tic-Tac-Toe, two players are required to play this game.");
             Console.WriteLine("Player 1 please enter your name.");
-            string name1 = Console.ReadLine();
+            string x1 = int.Parse(Console.ReadLine);
             Console.WriteLine("Player 2 please enter your name.");
-            string name2 = Console.ReadLine();
+            string x2 = Console.ReadLine();
 
             int x1 = 0;
             int x2 = 0;
