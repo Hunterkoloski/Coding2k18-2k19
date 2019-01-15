@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Inheritance_andAbstraction
 {
-    class sportscar
+    abstract class sportscar: Car
     {
-    }
+        protected float topspeed;
+        protected float horsepower;
+        
+        
+        public sportscar(float weight, float height, bool isloud, bool isfast, float topspeed, float horsepower)
+            :base(cartype, numbofwheels, carengine, weight, height, isloud, isfast)
+        {
+
+        }
 }
