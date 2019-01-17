@@ -12,7 +12,7 @@ namespace Inheritance_andAbstraction
         protected string cartype;
 
         public Car(float weight, float height, int numbofwheels, string make, string cartype, bool isfast, bool isloud)
-               :base( height, weight, isfast, isloud, numbofwheels,make  )
+               :base( height, weight, isfast, isloud, numbofwheels,)
         {
             this.cartype = cartype;
 
