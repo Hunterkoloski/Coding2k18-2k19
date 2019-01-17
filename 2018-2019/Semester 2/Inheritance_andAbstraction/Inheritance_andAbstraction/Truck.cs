@@ -11,12 +11,15 @@ namespace Inheritance_andAbstraction
         protected float towingcapacity;
         protected bool isheavy;
         protected float horsepower;
-        public Truck(float weight, float height, bool isloud, bool isfast, float towingcapacity, bool isheavy, float horsepower)
-          : base(weight, height, isloud, isfast)
+        public Truck(float weight, float height, bool isloud, bool isfast, float towingcapacity,  float horsepower, int numbofwheels)
+          : base(  height, weight, isfast, isloud, numbofwheels)
         {
             this.towingcapacity = towingcapacity;
-            this.isheavy = isheavy;
             this.horsepower = horsepower;
+        }
+        public override void printcar()
+        {
+            Console.WriteLine("Weight" + weight + "Height:" + height + "Is loud" + isloud + "is fast" + isfast + "towing capacity" + towingcapacity+ "horse power:" + horsepower  + "number of wheels" + numbofwheels);
         }
     }
 }

@@ -12,12 +12,18 @@ namespace Inheritance_andAbstraction
         public float weight;
         public bool isfast;
         public bool isloud;
-        public Motorized_vehicle(float height, float weight, bool isfast, bool isloud)
+        public int numbofwheels;
+       
+
+        public Motorized_vehicle( float height, float weight, bool isfast, bool isloud, int numbofwheels)
         {
             this.height = height;
             this.weight = weight;
             this.isfast = isfast;
             this.isloud = isloud;
+            this.numbofwheels = numbofwheels;
+            
         }
+        public abstract void printcar();
     }
 }
