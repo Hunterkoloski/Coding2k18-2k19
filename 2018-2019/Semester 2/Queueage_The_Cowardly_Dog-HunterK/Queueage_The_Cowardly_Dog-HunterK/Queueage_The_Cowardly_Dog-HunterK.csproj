@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{759EE439-C245-4AF1-90B6-B161103D7F5E}</ProjectGuid>
+    <ProjectGuid>{8C6E3581-82CC-4C1D-97F9-B8AB585A1F70}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Inheritance_andAbstraction</RootNamespace>
-    <AssemblyName>Inheritance_andAbstraction</AssemblyName>
+    <RootNamespace>Queueage_The_Cowardly_Dog_HunterK</RootNamespace>
+    <AssemblyName>Queueage_The_Cowardly_Dog-HunterK</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Car.cs" />
-    <Compile Include="Cruiser_motorcycle.cs" />
-    <Compile Include="Motorcycle.cs" />
-    <Compile Include="Motorized vehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="sedan.cs" />
-    <Compile Include="sportscar.cs" />
-    <Compile Include="Truck.cs" />
+    <Compile Include="queue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
