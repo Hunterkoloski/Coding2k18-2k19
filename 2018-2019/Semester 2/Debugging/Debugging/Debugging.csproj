@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C6E3581-82CC-4C1D-97F9-B8AB585A1F70}</ProjectGuid>
+    <ProjectGuid>{5386448B-0F91-478D-8D9C-2CB6A9A89996}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Queueage_The_Cowardly_Dog_HunterK</RootNamespace>
-    <AssemblyName>Queueage_The_Cowardly_Dog-HunterK</AssemblyName>
+    <RootNamespace>Debugging</RootNamespace>
+    <AssemblyName>Debugging</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Currencies.cs" />
-    <Compile Include="interface.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="queue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
