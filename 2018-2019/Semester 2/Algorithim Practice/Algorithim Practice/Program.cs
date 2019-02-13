@@ -89,12 +89,101 @@ namespace Algorithim_Practice
                                     file2[file2.Count - 1].Add(Arrays[i]);
                                 }
                             }
+                            for (int i = 0; i < file2.Count; i++)
+                            {
+                                bool isascending = true;
+                                bool isdescending = true;
+                                bool isvalid = true;
+                                for (int j = 0 j < file2[i].Count - i; j++)
+                                {
+                                    int right = 0;
+                                    int left = 0;
+                                    if (int.TryParse(file2[i][j], out left))
+                                    {
+                                        Console.WriteLine("Invalid");
+                                        isvalid = false;
+                                        break;
+                                    }
+                                    if (int.TryParse(file2[i][j], out right))
+                                    {
+                                        Console.WriteLine("Invalid");
+                                        isvalid = false;
+                                        break;
+                                    }
+
+
+                                    if (left < right)
+                                    {
+                                        isdescending = false;
+
+                                    }
+                                    if (left > right)
+                                    {
+                                        isascending = false;
+
+                                    }
+                                }
+
+                                if (isvalid == true)
+                                {
+                                    if (isascending == false && isdescending == false)
+                                    {
+                                        Console.WriteLine("Random");
+                                    }
+                                    else if (isdescending == true)
+                                    {
+                                        Console.WriteLine("is descending");
+                                    }
+                                    else if (isascending == true)
+                                    {
+                                        Console.WriteLine("is ascending");
+                                    }
+                                }
+
+
+                            }
+                            Console.ReadLine();
+
+                            break;
                         }
+
+                    case 3:
+                        string text4 = AppDomain.CurrentDomain.BaseDirectory + @"Prob04.in.txt";
+
+                        List<string> file3 = new List<string>();
+                        using (StreamReader sr = new StreamReader(text4))
+                        {
+                            string line;
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                file3.Add(line);
+                            }
+                        }
+                        int temp = 0;
+                        int tt5l = 0;
+                        for (int i = 0; i < file3.Count; i++)
+                        {
+
+                            temp = int.Parse(file3[i]);
+                            tt5l = temp;
+                            temp -= 1;
+
+                            while (temp > 0)
+                            {
+                                tt5l = (tt5l * temp);
+                                temp--;
+                            }
+                            Console.WriteLine(tt5l);
+                        }
+                        Console.ReadLine();
+
+                        break;
+
+
                 }
 
             }
         }
     }
 }
-
 
