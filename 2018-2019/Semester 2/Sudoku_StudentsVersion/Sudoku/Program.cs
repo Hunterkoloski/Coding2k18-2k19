@@ -180,7 +180,7 @@ namespace Sudoku
         public static bool SolveBoardIterativelyWithQueue(ref SudokuBoard board)
         {
             Queue<SudokuBoard> boards = new Queue<SudokuBoard>();
-            SudokuBoard newww = new SudokuBoard();
+            SudokuBoard fatdaddy = new SudokuBoard();
             boards.Enqueue(board);
 
 
@@ -190,12 +190,12 @@ namespace Sudoku
             {
                 //dequeue from the queue and store the returned value
 
-                newww = boards.Dequeue();
+                fatdaddy = boards.Dequeue();
                 //if the returned value is complete
-                if (newww.VerifyBoard())
+                if (fatdaddy.VerifyBoard())
                 {
                     //apply board to our ref parameter and return true
-                    board = newww;
+                    board = fatdaddy;
                     return true;
                 }
                 bool isgood = false;
@@ -204,17 +204,17 @@ namespace Sudoku
                 {
                     for (int y = 0; y < 9; y++)
                     {
-                        if (newww.Board[x, y] == 0)
+                        if (fatdaddy.Board[x, y] == 0)
                         {
                             //FindLegalDigits() on that space
-                            List<int> legal_digits = newww.FindLegalDigits(x, y);
+                            List<int> legal_digits = fatdaddy.FindLegalDigits(x, y);
 
                             //Enqueue a new board for each legal digit found (make sure to put that digit on the new board!)
                             if (isgood == false)
                             {
                                 for (int i = 0; i < legal_digits.Count; i++)
                                 {
-                                    SudokuBoard copy = new SudokuBoard(newww);
+                                    SudokuBoard copy = new SudokuBoard(fatdaddy);
                                     copy.Board[x, y] = legal_digits[i];
 
                                     boards.Enqueue(copy);

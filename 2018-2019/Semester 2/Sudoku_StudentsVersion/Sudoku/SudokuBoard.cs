@@ -1,4 +1,4 @@
-﻿sing System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -214,13 +214,13 @@ namespace Sudoku
             //Create list of all possible digits (1-9)
             List<int> correct = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             //Remove from the list all elements in the row
-
+            
             for (int i = 0; i < 9; i++)
             {
                 correct.Remove(Board[row, i]);
             }
 
-
+            
             //Remove from the list all elements in the column
 
             for (int i = 0; i < 9; i++)
