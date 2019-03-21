@@ -6,31 +6,27 @@ using System.Threading.Tasks;
 
 namespace Palindrome
 {
-    class Program
+    class program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            bool truFal = true;
-            for (int i = 0; i < length / 2; i++)
+            int num, temp, remainder, reverse = 0;
+            Console.WriteLine("Enter an integer \n");
+            num = int.Parse(Console.ReadLine());
+            temp = num;
+            while (num > 0)
             {
-                if (palindrome[i] != palindrome[length - (i + 1)])
-                {
-                    truFal = false;
-                    break;
-                }
+                remainder = num % 10;
+                reverse = reverse * 10 + remainder;
+                num /= 10;
             }
-
-
-            if (truFal)
-            {
-                Console.WriteLine(palindrome + "is a palindrome!");
-            }
-            else// else
-            {
-                Console.WriteLine(palindrome + " is not palindrome!");
-            }
-            Console.ReadLine(); 
-
+            Console.WriteLine("Given number is = {0}", temp);
+            Console.WriteLine("Its reverse is  = {0}", reverse);
+            if (temp == reverse)
+                Console.WriteLine("Number is a palindrome \n");
+            else
+                Console.WriteLine("Number is not a palindrome \n");
+            Console.ReadLine();
         }
     }
 }

@@ -94,7 +94,7 @@ namespace Algorithim_Practice
                                 bool isascending = true;
                                 bool isdescending = true;
                                 bool isvalid = true;
-                                for (int j = 0 j < file2[i].Count - i; j++)
+                                for (int j = 0; j < file2[i].Count - i; j++)
                                 {
                                     int right = 0;
                                     int left = 0;
